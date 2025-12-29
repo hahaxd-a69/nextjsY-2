@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Angry } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <Button variant="destructive">
-        <Angry />
-      </Button>
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-700">
+      <div className="flex gap-4">
+        <Link href="/dashboard">
+          <Button size="lg" variant="secondary">
+            Go to Dashboard
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
