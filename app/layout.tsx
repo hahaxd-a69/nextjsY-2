@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Moulpali } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
-import LoadingCard from "@/components/LoadingCard";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,19 +14,24 @@ const moulpali = Moulpali({
 });
 
 export const metadata: Metadata = {
-  title: "Blog App",
-  description: "A blog application built with Next.js",
+  title: "Blog & Photo App",
+  description: "A blog and photo gallery application built with Next.js",
 };
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode; // Add modal slot
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${moulpali.variable} antialiased`}>
-        <Suspense fallback={<LoadingCard />}>{children}</Suspense>
+    <html lang="en" className={`${inter.variable} ${moulpali.variable}`}>
+      <body className="antialiased">
+        <main className={inter.className}>
+          {children}
+          {modal}
+        </main>
       </body>
     </html>
   );

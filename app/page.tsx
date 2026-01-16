@@ -10,6 +10,12 @@ export default function Home() {
             Go to Dashboard
           </Button>
         </Link>
+        <Link
+          href="/photos"
+          className="font-semibold italic text-sky-600 underline"
+        >
+          Go to photos
+        </Link>
       </div>
     </div>
   );
