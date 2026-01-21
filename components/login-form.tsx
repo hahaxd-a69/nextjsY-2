@@ -39,7 +39,7 @@ export default function LoginForm() {
     resolver: zodResolver(formSchema),
   });
 
-  function loginSubmit(data: any) {
+  function loginSubmit(data: unknown) {
     console.log("login clicked: ", data);
   }
 
@@ -71,7 +71,7 @@ export default function LoginForm() {
               <Input id="password" type="password" {...register("password")} />
               <p className="text-red-500">{errors.password?.message}</p>
             </div>
-            {/* buttons */}
+
             <Button type="submit" className="w-full">
               Login
             </Button>

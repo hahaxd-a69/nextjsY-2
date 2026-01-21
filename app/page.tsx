@@ -1,9 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ProductForm from "@/components/producForm";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-700">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50">
       <div className="flex gap-4">
         <Link href="/dashboard">
           <Button size="lg" variant="secondary">
@@ -17,6 +19,7 @@ export default function Home() {
           Go to photos
         </Link>
       </div>
+      <ProductForm />
     </div>
   );
 }

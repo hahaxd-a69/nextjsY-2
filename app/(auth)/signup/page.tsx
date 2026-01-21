@@ -1,9 +1,10 @@
 import LoginForm from "@/components/login-form";
+import RegisterForm from "@/components/register-form";
 
-export default function Login() {
+export default function Signup() {
   return (
     <div className="flex justify-center">
-      <LoginForm />
+      <RegisterForm />
     </div>
   );
 }
