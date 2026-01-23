@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ProductForm from "@/components/producForm";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
           Go to photos
         </Link>
       </div>
-      <ProductForm />
     </div>
   );
 }
